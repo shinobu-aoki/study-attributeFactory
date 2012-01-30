@@ -12,7 +12,7 @@ class CustomAttributeFactoryTest extends FlatSpec with ShouldMatchers {
     instance should not be null
   }
   it should "create an attributeInstance of the specified package" in {
-    val instance = CustomAttributeFactory("custom.attribute")
+    val instance = Factory.instance
     // custom.attributeのインターフェースと実装
     val emptyAtt = instance.createAttributeInstance(classOf[attribute.EmptyAttribute])
     emptyAtt should not be null
